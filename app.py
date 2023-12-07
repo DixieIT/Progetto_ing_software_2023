@@ -57,6 +57,10 @@ def index():
     else:
         return render_template('index.html', modal_open=False)
 
+@app.route('/') #(+) index 
+def login():
+    return render_template('/index.html')
+
 @app.route('/create-item', methods=['POST'])
 def create_item():
     data = request.json
