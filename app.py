@@ -12,8 +12,8 @@ db = SQLAlchemy(app)
 
 # definisco il modello paziente
 class Paziente(db.Model):
-    CodiceFiscale = db.Column(db.String(16), primary_key=True, nullable=False, default='XXX-XXX-00-X-00-X-00-0-X')
-    DataDiNascita = db.Column(db.String, primary_key=True, nullable=False, default='00-00-0000') #(+) primary_key=True (chiave composta codice fiscale e data di nascita)
+    CodiceFiscale = db.Column(db.String(16), primary_key=True, nullable=False, default='XXXXXX00X00X000X')
+    DataDiNascita = db.Column(db.String(10), primary_key=True, nullable=False, default='00-00-0000') #(+) primary_key=True (chiave composta codice fiscale e data di nascita)
     Nome = db.Column(db.String(50), nullable=False)
     Cognome = db.Column(db.String(50), nullable=False)
     Username = db.Column(db.String(50), nullable=True)
@@ -134,6 +134,6 @@ if __name__ == '__main__':
         # inizializzo il database
         db.create_all()
     # avvio l'app in modalità debug
-    app.run(debug=True)
+    app.run(port=5555, debug=True)
 
 
