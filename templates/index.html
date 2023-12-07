@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <head>
+        <meta charset="UTF-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <title>Registrazione Paziente</title>
-</head>
+</head>  
 <body>
 
-<div class="container mt-5">
-  <h2 class="mb-4">Registrazione Paziente</h2>
-  <form id="registrationForm">
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="Username">Username</label>
-        <input type="text" class="form-control" id="Username" placeholder="Inserisci username" required>
+    <div class="container mt-5">
+        <h2 class="mb-4">Registrazione Paziente</h2>
+        <form id="registrationForm" method="post" action="/">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Username">Username</label>
+              <input type="text" class="form-control" id="Username" name="Username" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Password">Password</label>
+              <input type="password" class="form-control" id="Password" name="Password" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Nome">Nome</label>
+              <input type="text" class="form-control" id="Nome" name="Nome" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Cognome">Cognome</label>
+              <input type="text" class="form-control" id="Cognome" name="Cognome" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="CodiceFiscale">Codice Fiscale</label>
+            <input type="text" class="form-control" id="CodiceFiscale" name="CodiceFiscale" required>
+          </div>
+          <div class="form-group">
+            <label for="DataDiNascita">Data di Nascita</label>
+            <input type="text" class="form-control" id="DataDiNascita" name="DataDiNascita" required>
+          </div>
+          <div class="form-group">
+            <label for="Medico">Medico di Riferimento</label>
+            <select class="form-control" id="Medico" name="Medico" required>
+              <option value="medico1">Medico 1</option>
+              <option value="medico2">Medico 2</option>
+              <option value="medico3">Medico 3</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="inviaDati()">Registrati</button>
+        </form>
       </div>
-      <div class="form-group col-md-6">
-        <label for="Password">Password</label>
-        <input type="password" class="form-control" id="Password" placeholder="Inserisci password" required>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="Nome">Nome</label>
-        <input type="text" class="form-control" id="Nome" placeholder="Inserisci nome" required>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="Cognome">Cognome</label>
-        <input type="text" class="form-control" id="Cognome" placeholder="Inserisci cognome" required>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="CodiceFiscale">Codice Fiscale</label>
-      <input type="text" class="form-control" id="CodiceFiscale" placeholder="Inserisci codice fiscale" required>
-    </div>
-    <div class="form-group">
-      <label for="DataNascita">Data di Nascita</label>
-      <input type="date" class="form-control" id="DataNascita" required>
-    </div>
-    <div class="form-group">
-      <label for="Medico">Medico di Riferimento</label>
-      <select class="form-control" id="Medico" required>
-        <option value="medico1">Medico 1</option>
-        <option value="medico2">Medico 2</option>
-        <option value="medico3">Medico 3</option>
-      </select>
-    </div>
-    <button type="button" class="btn btn-primary" onclick="inviaDati()">Registrati</button>
-  </form>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <script>
-function inviaDati() {
-    var dati = {
-        username: $("#Username").val(),
-        password: $("#Password").val(),
-        nome: $("#Nome").val(),
-        cognome: $("#Cognome").val(),
-        codiceFiscale: $("#CodiceFiscale").val(),
-        dataNascita: $("#DataNascita").val(),
-        medico: $("#Medico").val()
-    };
-
-    $.ajax({
-        type: "POST",
-        url: "/create-item",
-        contentType: "application/json;charset=UTF-8",
-        data: JSON.stringify(dati),
-        success: function (response) {
-            console.log(response);
-        },
-        error: function (error) {
-            console.error(error);
-        }
-    });
-}
-</script>
+  function inviaDati() {
+      var dati = {
+          CodiceFiscale: $("#CodiceFiscale").val(),
+          DataDiNascita: $("#DataDiNascita").val(),
+          Nome: $("#Nome").val(),
+          Cognome: $("#Cognome").val(),
+          Username: $("#Username").val(),
+          Password: $("#Password").val(),
+          Medico: $("#Medico").val()
+      };
+  
+      $.ajax({
+          type: 'POST',
+          url: '/',
+          contentType: 'application/json; charset=UTF-8',
+          data: JSON.stringify(dati),
+          success: function(response) {
+              console.log(response);
+          },
+          error: function(error) {
+              console.error('Errore durante la chiamata AJAX:', error);
+          }
+      });
+  }
+  </script>
 
 </body>
 </html>

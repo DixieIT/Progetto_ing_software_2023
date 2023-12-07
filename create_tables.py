@@ -1,19 +1,20 @@
 import sqlite3
 
 # Connect to SQLite database
-conn = sqlite3.connect('test.db')
+conn = sqlite3.connect('Pazienti.db')
 cursor = conn.cursor()
 
 # Create Paziente table
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS paziente (
-        id INTEGER PRIMARY KEY,
-        nome TEXT NOT NULL,
-        cognome TEXT NOT NULL,
-        data_di_nascita DATE NOT NULL,
-        username TEXT,
-        password TEXT,
-        medico TEXT
+    CREATE TABLE IF NOT EXISTS Pazienti (
+        CodiceFiscale TEXT NOT NULL,
+        DataDiNascita TEXT NOT NULL,
+        Nome TEXT NOT NULL,
+        Cognome TEXT NOT NULL,
+        Username TEXT,
+        Password TEXT,
+        Medico TEXT,
+        PRIMARY KEY (CodiceFiscale, DataDiNascita)
     )
 ''')
 

@@ -1,78 +1,78 @@
-class paziente:
-    def __init__(self, nome, cognome, codicefiscale, data_nascita, username, password, medico):
-        self.nome = nome
-        self.cognome = cognome
-        self.codicefiscale = codicefiscale
-        self.data_nascita = data_nascita
-        self.username = username
-        self.password = password
-        self.medico = medico
+class Paziente:
+    def __init__(self, CodiceFiscale, DataDiNascita, Nome, Cognome, Username, Password, Medico):
+        self.CodiceFiscale = CodiceFiscale
+        self.DataDiNascita = DataDiNascita
+        self.Nome = Nome
+        self.Cognome = Cognome
+        self.Username = Username
+        self.Password = Password
+        self.Medico = Medico
 
     
     @property
-    def nome(self):
-        return self._nome
+    def Nome(self):
+        return self._Nome
 
-    @nome.setter
-    def nome(self, value):
-        self._nome = value
-
-    @property
-    def cognome(self):
-        return self._cognome
-
-    @cognome.setter
-    def cognome(self, value):
-        self._cognome = value
+    @Nome.setter
+    def Nome(self, value):
+        self._Nome = value
 
     @property
-    def codicefiscale(self):
-        return self._codicefiscale
+    def Cognome(self):
+        return self._Cognome
 
-    @codicefiscale.setter
-    def codicefiscale(self, value):
-        self._codicefiscale = value
-
-    @property
-    def data_nascita(self):
-        return self._data_nascita
-
-    @data_nascita.setter
-    def data_nascita(self, value):
-        self._data_nascita = value
+    @Cognome.setter
+    def Cognome(self, value):
+        self._Cognome = value
 
     @property
-    def username(self):
-        return self._username
+    def CodiceFiscale(self):
+        return self._CodiceFiscale
 
-    @username.setter
-    def username(self, value):
-        self._username = value
-
-    @property
-    def password(self):
-        return self._password
-
-    @password.setter
-    def password(self, value):
-        self._password = value
+    @CodiceFiscale.setter
+    def CodiceFiscale(self, value):
+        self._CodiceFiscale = value
 
     @property
-    def medico(self):
-        return self._medico
+    def DataDiNascita(self):
+        return self._DataDiNascita
 
-    @medico.setter
-    def medico(self, value):
-        self._medico = value
+    @DataDiNascita.setter
+    def DataDiNascita(self, value):
+        self._DataDiNascita = value
+
+    @property
+    def Username(self):
+        return self._Username
+
+    @Username.setter
+    def Username(self, value):
+        self._Username = value
+
+    @property
+    def Password(self):
+        return self._Password
+
+    @Password.setter
+    def Password(self, value):
+        self._Password = value
+
+    @property
+    def Medico(self):
+        return self._Medico
+
+    @Medico.setter
+    def Medico(self, value):
+        self._Medico = value
 
     def prenota_appuntamento(self, data, motivo):
-        print(f"{self.nome} {self.cognome} ha prenotato un appuntamento con il medico {self.medico} per il {data}. Motivo: {motivo}")
+        print(f"{self.Nome} {self.Cognome} ha prenotato un appuntamento con il Medico {self.Medico} per il {data}. Motivo: {motivo}")
     
     def visualizza_anagrafica(self):
-        print(f"Anagrafica di {self.nome} {self.cognome}:")
-        print(f"Codice Fiscale: {self.codicefiscale}")
-        print(f"Data di Nascita: {self.data_nascita}")
-        print(f"Medico di Riferimento: {self.medico}")
+        print(f"Anagrafica di {self.Nome} {self.Cognome}:")
+        print(f"Codice Fiscale: {self.CodiceFiscale}")
+        print(f"Data di Nascita: {self.DataDiNascita}")
+        print(f"Medico di Riferimento: {self.Medico}")
     
     def __str__(self):
-        return f"Paziente(nome={self.nome}, cognome={self.cognome},codicefiscale={self.codicefiscale}, data_nascita={self.data_nascita}, username={self.username}, medico={self.medico})"
+        return f"Paziente(Nome={self.Nome}, Cognome={self.Cognome},CodiceFiscale={self.CodiceFiscale}, DataDiNascita={self.DataDiNascita}, Username={self.Username}, Medico={self.Medico})"
