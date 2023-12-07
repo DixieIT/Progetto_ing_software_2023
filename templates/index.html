@@ -1,26 +1,60 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles_login.css">
-    <title>Login - Servizio Clinico Telematico</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Registrazione Paziente</title>
 </head>
 <body>
 
-    <div class="login-container">
-        <h1>Servizio Clinico Telematico</h1>
-        <p>Accedi al tuo account</p>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Accedi</button> 
-        </form>
+<div class="container mt-5">
+  <h2 class="mb-4">Registrazione Paziente</h2>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputUsername">Username</label>
+        <input type="text" class="form-control" id="inputUsername" placeholder="Inserisci username" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Inserisci password" required>
+      </div>
     </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputNome">Nome</label>
+        <input type="text" class="form-control" id="inputNome" placeholder="Inserisci nome" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCognome">Cognome</label>
+        <input type="text" class="form-control" id="inputCognome" placeholder="Inserisci cognome" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCodiceFiscale">Codice Fiscale</label>
+      <input type="text" class="form-control" id="inputCodiceFiscale" placeholder="Inserisci codice fiscale" required>
+    </div>
+    <div class="form-group">
+      <label for="inputDataNascita">Data di Nascita</label>
+      <input type="date" class="form-control" id="inputDataNascita" required>
+    </div>
+    <div class="form-group">
+      <label for="inputMedico">Medico di Riferimento</label>
+      <select class="form-control" id="inputMedico" required>
+        <!-- Opzioni per la selezione del medico -->
+        <option value="medico1">Medico 1</option>
+        <option value="medico2">Medico 2</option>
+        <option value="medico3">Medico 3</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Registrati</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
