@@ -1,0 +1,164 @@
+
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #363636;
+    background-image: url("https://cutewallpaper.org/25/best-effects-wallpaper/3050128742.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: SignPainter;
+    text-align: center;
+    color: #333;
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+    height: 100%;
+}
+
+nav {
+    font-family: 'Caveat', cursive;
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    height: 49vh;
+    margin-top: 13%;
+    border-radius: 10px;
+}
+
+.menu-label {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    padding-top: 18px;
+    font-size: 32px;
+    text-decoration: underline;
+    border-bottom: 2px solid white;
+}
+
+nav ul {
+    font-family: 'Roboto Slab', serif;
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+nav li {
+    margin-bottom: 24px;
+}
+
+nav a:not(.menu-label a){
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    font-size: 21px;
+    padding: 25px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.paziente-dati {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-right: 3%;
+    padding-top: 6px;
+}
+
+.pressioni-grafico {
+    border: 1px solid #d4d2d2;
+    padding: 3px;
+}
+
+.titolo{
+    font-family: 'Roboto Slab', serif;
+    font-size: 19px;
+
+
+}
+
+.testoInformativo{
+    margin-top: 10px;
+    width:100%;
+    height: 88px;
+}
+
+.flex-container{
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 19px;
+   border-bottom: 2px solid #b0b0b0;
+}
+
+.info-paziente {
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 22px;
+}
+
+.terapie {
+    margin-top: 20px;
+}
+
+.lista_terapie{
+    height: 100%;
+    margin-top: 11px;
+    border-right: 2px solid #635e5e;
+}
+
+.notifica {
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    height: 25px;
+}
+
+.boton{
+  width:100%;
+  text-align: right;
+  margin-top: 25px;
+}
+
+button {
+    margin-right: 10px;
+    border: 2px solid #eda561;
+    border-radius: 5px;
+    padding: 3px;
+}

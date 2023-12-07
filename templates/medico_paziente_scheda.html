@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles_medico_terapie.css">
+    <link rel="stylesheet" href="../static/styles_medico_paziente_scheda.css">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Includi Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Paziente</title>
+</head>
+<body>
+      <div class="container">
+        <h1 id="pageTitle">Scheda Paziente</h1>
+
+        <nav>
+            <div class="menu-label"><a href="medico_Home.html" style=" color: #afc9de;">MENU</a></div>
+            <ul>
+                <li><a href="medico_farmaci.html"> - Farmaci</a></li>
+                <li><a href="medico_terapie.html"> - Terapie</a></li>
+                <li><a href="medico_pazienti.html"> - Pazienti</a></li>
+            </ul>
+        </nav>
+
+        <div class="flex-container">
+            <section class="paziente-dati">
+                qui vanno i dati del paziente
+                e allora li metteremo
+            </section>
+
+            <section class="pressioni-grafico">
+                <div>
+                    <label for="selezionePeriodo">Seleziona periodo:</label>
+                    <select id="selezionePeriodo" onchange="aggiornaGrafico()">
+                        <option value="settimane">Settimane</option>
+                        <option value="mesi">Mesi</option>
+                    </select>
+                </div>
+
+
+                <!-- Grafico delle pressioni -->
+                <canvas id="graficoPressioni"></canvas>
+
+            </section>
+        </div>
+
+        <section class="info-paziente">
+            <div class="titolo" style="padding-left: 2px;">INFO PAZIENTE</div>
+
+            <textarea class="testoInformativo" id="testoInformativo" placeholder="Inserisci Info Paziente"></textarea>
+        </section>
+
+        <section class="terapie">
+            <div class="titolo" style="padding-left: 2px;">TERAPIE SEGUITE</div>
+            <div class="boton">
+                <button id="cambiaTerapia">Cambia Terapia</button>
+                <button id="aggiungiTerapia">Aggiungi Terapia</button>
+            </div>
+
+            <div class="lista_terapie">
+                <!-- Elenco delle terapie -->
+                <div class="notifica">
+                      TERAPIA 1
+                </div>
+                <div class="notifica">
+                      TERAPIA 2
+                </div>
+                <div class="notifica">
+                      TERAPIA 3
+                </div>
+
+                <div class="notifica">
+                      TERAPIA 1
+                </div>
+                <div class="notifica">
+                      TERAPIA 2
+                </div>
+                <div class="notifica">
+                      TERAPIA 3
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+          // Codice JavaScript per creare il grafico
+          var ctx = document.getElementById('graficoPressioni').getContext('2d');
+          var graficoPressioni; // Conserva l'oggetto Chart
+
+          // Inizializza il grafico
+          inizializzaGrafico();
+
+          function inizializzaGrafico() {
+              // Ottieni il valore selezionato
+              var periodo = document.getElementById('selezionePeriodo').value;
+
+              // Crea un nuovo grafico
+              graficoPressioni = new Chart(ctx, {
+                  type: 'line',
+                  data: {
+                      labels: (periodo === 'settimane') ? ['settimana 1', 'settimana 2', 'settimana 3', 'settimana 4'] : ['inizio mese 1', 'fine mese 1', 'inizio mese 2','fine mese 2'],
+                      datasets: [{
+                          label: 'Pressioni Sistolica',
+                          borderColor: 'rgb(255, 191, 0)',
+                          data: (periodo === 'settimane') ? [120, 125, 105, 110, 130] : [120, 130, 118, 107],
+                      }]
+                  },
+                  options: {}
+              });
+          }
+
+          function aggiornaGrafico() {
+              // Distruggi il grafico esistente
+              graficoPressioni.destroy();
+
+              // Inizializza e crea un nuovo grafico
+              inizializzaGrafico();
+          }
+      </script>
+
+
+</body>
+</html>
