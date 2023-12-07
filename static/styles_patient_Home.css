@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://pixexid.com/api/download/image/4k-ultra-hd-wallpaper-with-abstract-liquid-metallic-design-rqruw5xy.jpeg"); /* Sostituisci con l'URL dell'immagine di sfondo */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo bianco sfumato */
+    padding: 20px;
+    padding-top: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: SignPainter;
+    text-align: center;
+    color: #333;
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px; /* Puoi regolare la distanza tra la checkbox e l'etichetta */
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #333;
+    white-space: nowrap;
+}
+input::placeholder {
+    font-family: monospace;
+    color: #bfc4cc; /* Colore grigio chiaro */
+    font-size: 13px; /* Dimensione del carattere del placeholder */
+}
+textarea::placeholder {
+    font-family: monospace;
+    color: #bfc4cc; /* Colore grigio chiaro */
+    font-size: 13px; /* Dimensione del carattere del placeholder */
+}
+
+input, textarea {
+    width: 100%; /* Larghezza al 100% del contenitore */
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.line {
+    border-color: #ccc; /* Specifica il colore della linea */
+    margin: 20px 0; /* Aggiunge spaziatura sopra e sotto la linea, se necessario */
+}
+
+button {
+    background-color: #3c84c0;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #215392;
+}

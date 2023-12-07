@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles_patient_Home.css">
+<title>Sezione Paziente</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sezione Paziente</h1>
+
+        <section>
+            <h2>Inserisci Valori SBP/DBP</h2>
+            <!-- Form per inserire valori -->
+            <form>
+                <!-- Campi per SBP e DBP -->
+                <label for="sbp">SBP:</label>
+                <input type="text" id="sbp" name="sbp" placeholder="Inserisci pressione sistolica (SBP)" required>
+
+                <label for="dbp">DBP:</label>
+                <input type="text" id="dbp" name="dbp" placeholder="inserisci pressione diastolica (DBP)" required>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Prescrizioni Giornaliere</h2>
+            <!-- Elenco farmaci con possibilità di spuntare la casella "Si" -->
+            <ul>
+                <li>
+                    <label for="farmaco1">Farmaco 1</label>
+                    <input type="checkbox" id="farmaco1">
+                </li>
+                <li>
+                    <label for="farmaco2">Farmaco 2</label>
+                    <input type="checkbox" id="farmaco2">
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Sintomi del Paziente</h2>
+            <!-- Area testuale per i sintomi -->
+            <textarea id="sintomi" placeholder="Inserisci qui i tuoi sintomi"></textarea>
+        </section>
+
+
+
+        <section>
+            <h2>Segnalazioni e Aggiunte</h2>
+            <!-- Area testuale per segnalazioni e aggiunte -->
+            <textarea id="segnalazioni" placeholder="Eventuali sintomi, patologie e/o terapie concomitanti vanno opportunamente segnalati da parte del paziente con aggiunta di periodo associato"
+            style="width: 565px; height: 63px;"></textarea>
+        </section>
+        <hr class="line">
+
+        <section>
+            <h2>Invia Mail al Medico di Riferimento</h2>
+            <!-- Form per inviare una mail al medico -->
+            <form>
+
+                <textarea id="messaggio" name="messaggio" placeholder="Scrivi il tuo messaggio"></textarea>
+                <button type="submit">Invia Mail</button>
+            </form>
+        </section>
+
+
+    </div>
+
+</body>
+</html>

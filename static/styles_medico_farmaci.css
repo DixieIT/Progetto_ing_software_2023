@@ -1,0 +1,106 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://img.freepik.com/premium-photo/medicine-medication-future-ai-generated-personalized-medicine-with-digital-health_700226-2189.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s ease;
+}
+
+h1 {
+    font-family: SignPainter;
+    text-align: center;
+    color: #333;
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Aumenta la larghezza massima */
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+
+
+nav {
+    font-family: 'Caveat', cursive;
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    height: 49vh;
+    margin-top: 13%;
+    border-radius: 10px;
+}
+
+.menu-label {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    padding-top: 18px;
+    font-size: 32px;
+    text-decoration: underline;
+    border-bottom: 2px solid white;
+}
+
+
+nav ul {
+    font-family: 'Roboto Slab', serif;
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+nav li {
+    margin-bottom: 24px;
+}
+
+nav a:not(.menu-label a){
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 21px;
+    padding: 25px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+
+.search-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+#search-button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
